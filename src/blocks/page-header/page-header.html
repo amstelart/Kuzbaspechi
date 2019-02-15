@@ -1,0 +1,145 @@
+<!--DEV
+
+Нужно убрать пробел между @-ами:
+
+@ @include('blocks/page-header/page-header.html')
+
+-->
+
+<header class="page-header" role="banner">
+  <div class="page-header__top">
+    <div class="container">
+      <ul class="menu menu--top">
+        <li class="menu__item">
+          <a class="menu__link" href="#">О компании</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Заводы</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Информация</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Доставка</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Личный кабинет</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Оптовым клиентам</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="page-header__main">
+    <div class="container">
+      <div class="header">
+        <a href="index.html" class="logo">
+          <img src="img/logo.svg" alt="Лого">
+        </a>
+        <div class="header__group">
+          <div class="header__part">
+
+            <div class="dropdown dropdown--place">
+              <a id="dropdown-place" href="#" class="dropdown__toggler" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>г. Ленинск-Кузнецкий</span></a>
+              <ul class="dropdown__menu menu" aria-labelledby="dropdown-place">
+                <li class="menu__item"><a class="menu__link" href="#">Кемерово</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">г. Ленинск-Кузнецкий</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Новокузнецк</a></li>
+              </ul>
+            </div>
+
+          </div>
+          <div class="header__part">
+            <form class="search-form header__search">
+              <input class="search-form__input" type="search" placeholder="Искать товар по названию">
+              <button class="search-form__btn"></button>
+            </form>
+          </div>
+          <div class="header__part">
+            <a class="main-phone" href="tel:+7 905 905 30 17">
+              <svg class="main-phone__icon" width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-phone"></use></svg>
+              +7 905 905 30 17
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-header__bottom">
+    <div class="container">
+      <nav id="main-nav" class="main-nav" role="navigation">
+        <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item  main-nav__item--active">
+            <a href="" class="main-nav__link">
+              Каталог
+            </a>
+            <div class="main-nav__sublist-wrapper  main-nav__sublist-wrapper--lvl-2">
+              <ul class="main-nav__list  main-nav__list--lvl-2">
+                <li class="main-nav__item  main-nav__item--lvl-2">
+                  <a href="" class="main-nav__link  main-nav__link--lvl-2">
+                    Контакты
+                  </a>
+                </li>
+                <li class="main-nav__item  main-nav__item--lvl-2">
+                  <a href="" class="main-nav__link  main-nav__link--lvl-2">
+                    Услуги
+                  </a>
+                  <div class="main-nav__sublist-wrapper  main-nav__sublist-wrapper--lvl-3">
+                    <ul class="main-nav__list  main-nav__list--lvl-3">
+                      <li class="main-nav__item  main-nav__item--lvl-3">
+                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
+                          Вёрстка HTML-CSS
+                        </a>
+                      </li>
+                      <li class="main-nav__item  main-nav__item--lvl-3">
+                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
+                          Стриптиз
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">
+              Онлайн расчет дымохода
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">
+              Отзывы
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">
+              Распродажа
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">
+              <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-pdf"></use></svg>
+              <span>КП</span>
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">
+              <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-compare"></use></svg>
+              <span>Сравнить</span>
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">
+              <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-basket"></use></svg>
+              <span>145 000 ₽</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+</header>

@@ -1,0 +1,92 @@
+// В этом файле должны быть стили для БЭМ-блока dropdown, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+$text-color:                  hsl(0, 0%, 10%) !default;
+
+$border-color:                hsl(0, 0%, 60%) !default;
+
+$border-radius:               3px !default;
+
+$transition-time:             0.3s !default;
+
+.dropdown {
+
+  $block-name:                &; // #{$block-name}__element
+
+  position: relative;
+  display: inline-block;
+
+  &__menu {
+    position: absolute;
+    z-index: -1;
+    top: 100%;
+    left: 0;
+    max-width: 90vw;
+    width: 1px;
+    margin: 0;
+    background-color: #fff;
+    color: $text-color;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: opacity $transition-time;
+
+    &--up {
+      top: auto;
+      bottom: 100%;
+    }
+
+    &--right {
+      left: auto;
+      right: 0;
+    }
+  }
+
+
+  &--open & {
+
+    &__menu {
+      z-index: 1;
+      visibility: visible;
+      opacity: 1;
+      width: auto;
+    }
+  }
+
+  &--place {
+
+    #{$block-name}__toggler {
+      font-size: 16px;
+      font-weight: 600;
+      color: inherit;
+      text-decoration: none;
+      border: 1px solid transparent;
+      padding: 10px 24px;
+
+      span {
+        border-bottom: 1px dashed $black;
+      }
+    }
+
+    &.dropdown--open {
+      #{$block-name}__toggler {
+        border-top: 1px solid $color-main;
+        border-right: 1px solid $color-main;
+        border-left: 1px solid $color-main;
+
+        span {
+          border-color: transparent;
+        }
+      }
+
+    }
+
+    #{$block-name}__menu {
+      border-bottom: 1px solid $color-main;
+      border-right: 1px solid $color-main;
+      border-left: 1px solid $color-main;
+      width: 100%;
+    }
+  }
+}

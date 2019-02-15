@@ -1,0 +1,74 @@
+// В этом файле должны быть стили для БЭМ-блока catalog-search, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.catalog-search {
+
+  $block-name:                &; // #{$block-name}__element
+
+  margin-bottom: 34px;
+
+  &__title {
+    border-bottom: 2px solid $color-main;
+
+    span {
+      display: inline-block;
+      border: 2px solid $color-main;
+      color: $color-main;
+      font-family: $font-family--second;
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: -2px;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      padding: 12px;
+    }
+  }
+
+  &__inner {
+    background-color: rgb(245, 245, 245);
+    box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.05);
+    padding: 30px 60px;
+    border: 1px solid $border-color;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top: none;
+  }
+
+  &__form {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  &__more {
+    display: flex;
+    justify-content: flex-end;
+
+    a {
+      font-size: 14px;
+      font-weight: 600;
+      font-family: $font-family--second;
+      border-bottom: 1px dashed $color-main;
+      text-decoration: none;
+    }
+  }
+
+  &__form-part {
+    margin-right: 30px;
+    flex-grow: 1;
+    min-width: 145px;
+
+    .field-actions {
+      margin: 0;
+
+      .btn {
+        margin: 0;
+        width: 100%;
+      }
+    }
+
+    .field-select {
+      margin-bottom: 0;
+    }
+  }
+}

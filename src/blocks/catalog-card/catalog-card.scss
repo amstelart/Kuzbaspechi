@@ -1,0 +1,86 @@
+// В этом файле должны быть стили для БЭМ-блока catalog-card, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.catalog-card {
+
+  $block-name:                &; // #{$block-name}__element
+
+
+  &__inner {
+    border: 1px solid $border-color;
+    padding: 11px;
+    border-radius: 4px;
+
+    &:hover,
+    &:focus {
+      border-color: $color-main;
+    }
+  }
+
+  &__img {
+    text-align: center;
+  }
+
+  &__header {
+    text-align: center;
+    padding: 0 30px;
+    margin-bottom: 10px;
+  }
+
+  &__category {
+    margin-bottom: 5px;
+    display: inline-block;
+    font-size: 14px;
+    color: #757575;
+    text-decoration: none;
+    font-family: $font-family--second;
+
+    &:hover,
+    &:focus {
+      color: $color-main;
+    }
+  }
+
+  &__name {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: $font-family--second;
+  }
+
+  &__body {}
+
+  &__price {
+    margin-bottom: 10px;
+    .price {
+      font-family: $font-family--second;
+      font-size: 18px;
+      color: $color-main;
+      font-weight: 700;
+      margin-right: 10px;
+
+      &--old {
+        font-size: 14px;
+        color: #757575;
+        font-weight: 400;
+      }
+    }
+  }
+
+  &__info {
+    font-family: $font-family--second;
+
+    .info-item {
+      font-size: 14px;
+      color: #757575;
+      display: flex;
+      align-items: flex-end;
+
+      span {
+        color: #212121;
+        font-weight: 500;
+        margin-left: auto;
+      }
+    }
+  }
+}
